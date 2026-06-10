@@ -1,16 +1,47 @@
-# React + Vite
+# ✈️ FlyBie Airlines - AI Booking Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the FlyBie Airlines project! This is a modern, responsive flight booking web application powered by **React**, **Vite**, and **Azure OpenAI**. It features a stunning landing page and a real-time conversational UI that integrates directly with the **Travelport uAPI** to fetch live flight pricing and schedules.
 
-Currently, two official plugins are available:
+## ✨ Features
+* **Landing Page:** Beautiful, animated landing page built with modern CSS and Lucide React icons.
+* **Conversational Booking:** Talk to the Azure AI assistant to book your flights using natural language.
+* **Auto-Filling Smart Widget:** The chat widget seamlessly extracts Origin, Destination, and Dates from your conversation and auto-fills the inputs.
+* **Live Travelport Integration:** Searches for live global flights via the Travelport B2B Gateway using native SOAP XML API calls.
+* **CORS Proxy:** Bypasses enterprise API CORS blocks using a local Vite proxy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+If you have downloaded or cloned this repository, follow these steps to get the application running on your local machine.
 
-## Expanding the ESLint configuration
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Install Dependencies
+Open your terminal, navigate to the project folder, and run:
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+This application uses Azure OpenAI to power the chatbot. Since API keys should never be committed to GitHub, you need to create your own configuration file.
+
+Create a new file named `.env` in the root of the project folder and add your Azure credentials:
+
+```env
+VITE_AZURE_OPENAI_ENDPOINT="https://<your-resource-name>.services.ai.azure.com"
+VITE_AZURE_OPENAI_API_KEY="your-api-key-here"
+VITE_AZURE_OPENAI_DEPLOYMENT_NAME="gpt-4"
+```
+
+### 4. Start the Development Server
+Run the following command to boot up the application:
+```bash
+npm run dev
+```
+
+### 5. Open the Application
+Once the server starts, open your browser and navigate to the local URL provided in the terminal (usually `http://localhost:5173/`).
+
+Enjoy exploring FlyBie! 🛫
